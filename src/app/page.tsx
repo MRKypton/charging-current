@@ -89,8 +89,8 @@ export default function Home() {
   const [Ic, setIc] = useState<number>(0);
   const [V, setV] = useState<number>(115);
   const [distance, setDistance] = useState<number>(1);
-  const [Bc, setBc] = useState<number>(0);
-  const [curBc, setCurBc] = useState<number>(0);
+  const [Bc, setBc] = useState<number>(3.2163);
+  const [curBc, setCurBc] = useState<number>(1);
   const Susceptance = [3.2163, 3.123, 4.3156, 4.1464, 3.2238, 4.3326];
 
   useEffect(() => {
