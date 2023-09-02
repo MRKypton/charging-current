@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Inputs from "@/components/Inputs";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -92,10 +91,7 @@ export default function Home() {
   const [distance, setDistance] = useState<number>(1);
   const [Bc, setBc] = useState<number>(0);
   const [curBc, setCurBc] = useState<number>(0);
-  // const baseIc = (V * 1000) / Math.sqrt(3);
   const Susceptance = [3.2163, 3.123, 4.3156, 4.1464, 3.2238, 4.3326];
-  // console.log(Susceptance);
-  // console.log(Math.pow(10, 3), Math.pow(10, -6));
 
   useEffect(() => {
     const ic = (V * Bc * Math.pow(10, -3)) / Math.sqrt(3);
