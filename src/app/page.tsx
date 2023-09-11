@@ -82,16 +82,21 @@ export default function Home() {
   const [L, setL] = useState<number>(0);
   const [Ic, setIc] = useState<number>(0);
   const [V, setV] = useState<number>(115);
-  const [distance, setDistance] = useState<number>(1);
+  const [distance, setDistance] = useState<number>(0);
   const [Bc, setBc] = useState<number>(3.2163);
   const [curBc, setCurBc] = useState<number>(0);
   const Susceptance = [3.2163, 3.123, 4.3156, 4.1464, 3.2238, 4.3326];
 
   useEffect(() => {
-    const ic = (V * Bc * Math.pow(10, -3)) / Math.sqrt(3);
-    setIc(ic);
-    const l = ((V / Math.sqrt(3)) * ic) / 2;
-    setL(l);
+    if (distance > 0) {
+      const ic = (V * Bc * Math.pow(10, -3)) / Math.sqrt(3);
+      setIc(ic);
+      const l = ((V / Math.sqrt(3)) * ic) / 2;
+      setL(l);
+    } else {
+      setIc(0);
+      setL(0);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Bc, distance]);
 
