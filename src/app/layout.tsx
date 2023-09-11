@@ -6,11 +6,11 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Charging current",
-  description:
-    "A simple app to calculate charging current for high voltage AC transmission lines",
-};
+// export const metadata: Metadata = {
+//   title: "Charging current",
+//   description:
+//     "A simple app to calculate charging current for high voltage AC transmission lines",
+// };
 
 export default function RootLayout({
   children,
@@ -19,6 +19,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="A simple app to calculate charging current for high voltage AC transmission lines"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Charging current</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={inter.className}>
         <div
           onClick={(e) => {
