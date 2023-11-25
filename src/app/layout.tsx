@@ -30,7 +30,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={inter.className}>
-        <div
+        {/* <div
           onClick={(e) => {
             e.currentTarget.classList.add("md:hidden");
           }}
@@ -40,7 +40,7 @@ export default function RootLayout({
             <h1 className="text-4xl font-bold text-center drop-shadow">{`This site doesn't build for large screen yet`}</h1>
             <p className="text-center">click to disable this warning</p>
           </div>
-        </div>
+        </div> */}
         {children}
       </body>
     </html>
